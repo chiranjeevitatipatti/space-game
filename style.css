@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+}
+
+body {
+  background: #0a0a0a;
+  color: white;
+  display: flex;
+  font-size: 15px;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 20px);
+  margin: 0 auto;
+  outline: 1px solid #26c6da;
+  position: relative;
+  width: 1100px;
+}
+
+#header {
+  display: flex;
+  font-size: 30px;
+  justify-content: space-around;
+  padding: 10px 0;
+  width: 100%;
+}
+
+#score span:nth-child(2) {
+  color: #26c6da;
+  display: inline-block;
+  min-width: 100px;
+  text-align: center;
+}
+
+#earth {
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  width: 100%;
+}
+
+#invader-column-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.invader-column {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+}
+
+.invader {
+  background: #26c6da;
+  border: 0;
+  height: 50px;
+  width: 90px;
+  background: url("https://i.postimg.cc/NjQ4VKPY/invader.gif") center center/cover no-repeat;
+  position: relative;
+}
+.invader:not(:first-child) {
+  margin-top: 10px;
+}
+
+#player-zone {
+  height: 50px;
+  position: relative;
+  width: 100%;
+}
+
+#player {
+  background: #26c6da;
+  border: 0;
+  height: 50px;
+  width: 90px;
+  background: url("https://i.postimg.cc/m2Yj8Yj8/player.png") center center/cover no-repeat;
+  bottom: 0;
+  left: 499px;
+  position: absolute;
+}
+
+#gun {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.bullet {
+  background: white;
+  height: 20px;
+  position: fixed;
+  width: 6px;
+  z-index: 999;
+}
+
+#lives {
+  display: flex;
+}
+
+#lives-list {
+  display: flex;
+}
+
+.life {
+  background: url("https://i.postimg.cc/m2Yj8Yj8/player.png") center center/contain no-repeat;
+  height: 30px;
+  margin-left: 10px;
+  width: 40px;
+}
+
+#btn-group {
+  display: flex;
+  justify-content: space-between;
+  width: 215px;
+}
+
+.btn {
+  background: 0;
+  border: 2px solid #26c6da;
+  border-radius: 3px;
+  color: #26c6da;
+  cursor: pointer;
+  font-weight: 600;
+  height: 50px;
+  text-transform: uppercase;
+  width: 50px;
+}
+.btn:hover {
+  background: #26c6da;
+  color: #0a0a0a;
+}
+.btn--wide {
+  width: 100px;
+}
+.btn:not(:first-child) {
+  margin-left: 5px;
+}
+
+#instructions__movement {
+  align-items: center;
+  display: flex;
+  font-size: 25px;
+  justify-content: center;
+}
+
+.instructions__key--down {
+  display: flex;
+  flex-direction: column;
+}
+
+#menu {
+  align-self: center;
+  text-align: center;
+}
+
+.menu__gif {
+  background: url("https://i.postimg.cc/NjQ4VKPY/invader.gif") center center/contain no-repeat;
+  height: 150px;
+  margin: 0 auto;
+}
+@media (max-width: 375px) {
+  .menu__gif {
+    height: 75px;
+  }
+}
+
+.menu__title {
+  color: #26c6da;
+  font-size: 6.5vw;
+  text-transform: uppercase;
+}
+
+.difficulty__title {
+  color: #26c6da;
+  font-size: 2vw;
+  margin: 40px 0;
+  text-transform: uppercase;
+}
+
+.menu__difficulty-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu__difficulty-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu__difficulty {
+  display: inline-block;
+  font-size: 1.5vw;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+.menu__difficulty:hover {
+  color: #26c6da;
+}
+
+#modal {
+  background: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.modal__inner {
+  align-items: center;
+  border: 2px solid #26c6da;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 20% auto;
+  padding: 25px;
+  text-align: center;
+  width: 375px;
+}
+.modal__inner button {
+  margin-top: 15px;
+  width: 100px;
+}
